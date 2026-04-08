@@ -34,8 +34,7 @@ body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-weight
 body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:36px 6vw;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s;}
-nav.scrolled{background:rgba(28,22,17,0.97);backdrop-filter:blur(12px);padding:18px 6vw;border-bottom:1px solid var(--border);}
+nav{position:absolute;top:0;left:0;right:0;z-index:100;padding:36px 46px;display:flex;justify-content:space-between;align-items:center;}
 .nav-name{font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--cream);text-decoration:none;transition:color 0.2s;}
 .nav-name:hover{color:var(--cream);}
 .nav-links{display:flex;gap:28px;align-items:center;}
@@ -234,8 +233,8 @@ footer{padding:32px 6vw;border-top:1px solid var(--border);display:flex;justify-
     <div class="hero-tags">
       <span class="htag">Documentary Filmmaker</span>
       <span class="htag">Creative Director</span>
+      <span class="htag">Commercial Storyteller</span>
       <span class="htag">Creator Educator</span>
-      <span class="htag">Byron Bay</span>
     </div>
   </div>
 </section>
@@ -523,8 +522,7 @@ footer{padding:32px 6vw;border-top:1px solid var(--border);display:flex;justify-
 </footer>
 
 <script>
-const nav=document.getElementById('nav');
-addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+// nav scrolls with page — no sticky behaviour
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
