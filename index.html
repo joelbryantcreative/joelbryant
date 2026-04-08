@@ -121,7 +121,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:
 .portfolio-headline em{font-style:italic;color:var(--gold);}
 .portfolio-sub{font-size:0.93rem;line-height:1.85;color:var(--cream2);}
 .film-cards{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);}
-.film-card{display:grid;grid-template-columns:480px 1fr;gap:0;background:var(--bg);transition:background 0.3s;position:relative;overflow:hidden;}
+.film-card{display:grid;grid-template-columns:480px 1fr;gap:0;background:var(--bg);transition:background 0.3s;position:relative;overflow:hidden;text-decoration:none;color:inherit;}
 .film-card:hover{background:var(--bg2);}
 .film-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform 0.4s ease;}
 .film-card:hover::before{transform:scaleY(1);}
@@ -443,7 +443,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
     <div class="wt-panel" id="wt-documentary">
       <div class="film-cards">
 
-        <div class="film-card reveal" data-video="https://www.youtube.com/embed/8GG6SbLBU90?autoplay=1">
+        <a class="film-card reveal" href="flowing-wood.html">
           <div class="fc-image">
             <img src="images/Flowing-Wood-Poster.jpg" alt="Flowing Wood">
             <div class="fc-play"><div class="fc-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="6,4 20,12 6,20"/></svg></div></div>
@@ -458,9 +458,9 @@ section, .sec, .cred-strip, .learn-transition, footer,
               <span class="fc-meta-item"><span class="fc-meta-dot"></span>Noosa Film Festival · France Anglet International Surf Film Festival</span>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="film-card reveal" data-video="">
+        <a class="film-card reveal" href="koud-retreat.html">
           <div class="fc-image">
             <img src="images/Koud-placeholder.png" alt="Koud Retreat">
             <div class="fc-play"><div class="fc-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="6,4 20,12 6,20"/></svg></div></div>
@@ -474,9 +474,9 @@ section, .sec, .cred-strip, .learn-transition, footer,
               <span class="fc-meta-item"><span class="fc-meta-dot"></span>A film by Joel Bryant</span>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="film-card reveal" data-video="">
+        <a class="film-card reveal" href="convivio.html">
           <div class="fc-image">
             <img src="images/CONVIVIO-placeholder.png" alt="Convivio Launch">
             <div class="fc-play"><div class="fc-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="6,4 20,12 6,20"/></svg></div></div>
@@ -490,9 +490,9 @@ section, .sec, .cred-strip, .learn-transition, footer,
               <span class="fc-meta-item"><span class="fc-meta-dot"></span>A film by Joel Bryant</span>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="film-card reveal" data-video="">
+        <a class="film-card reveal" href="no-taps-kenya.html">
           <div class="fc-image">
             <img src="images/Kenya-placeholder.jpg" alt="No Taps Kenya">
             <div class="fc-play"><div class="fc-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="6,4 20,12 6,20"/></svg></div></div>
@@ -507,7 +507,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
               <span class="fc-meta-item"><span class="fc-meta-dot"></span>A film by Joel Bryant</span>
             </div>
           </div>
-        </div>
+        </a>
 
       </div>
     </div>
