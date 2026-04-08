@@ -34,26 +34,31 @@ body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-weight
 body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");}
 
 /* ── NAV ── */
-nav{position:absolute;top:0;left:0;right:0;z-index:100;padding:44px 46px;display:flex;justify-content:space-between;align-items:center;}
-.nav-name{font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--cream);text-decoration:none;}
+/* ── ANNOUNCEMENT BANNER ── */
+.announce{background:#f4efe6;color:#28221b;text-align:center;padding:10px 6vw;font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;}
+.announce a{color:#28221b;text-decoration:none;border-bottom:1px solid rgba(40,34,27,0.3);}
+.announce a:hover{border-bottom-color:#28221b;}
+
+/* ── STICKY NAV ── */
+nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:0 6vw;display:flex;justify-content:space-between;align-items:center;height:64px;border-bottom:1px solid rgba(244,239,230,0.08);}
+.nav-name{font-family:var(--sans);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--cream);text-decoration:none;}
 .nav-links{display:flex;gap:28px;align-items:center;}
-.nav-link{font-family:var(--sans);font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);text-decoration:none;transition:opacity 0.2s;}
+.nav-link{font-family:var(--sans);font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);text-decoration:none;transition:opacity 0.2s;}
 .nav-link:hover{opacity:0.6;}
 .nav-cta{font-family:var(--sans);font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);text-decoration:none;border:1px solid rgba(244,239,230,0.5);padding:8px 18px;transition:all 0.2s;}
 .nav-cta:hover{background:rgba(244,239,230,0.1);}
 
 /* ── HERO ── */
 .hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:visible;padding:20px;background:var(--cream);box-sizing:border-box;}
-.hero-bg{position:absolute;inset:20px;z-index:0;border-radius:18px;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;filter:brightness(0.82);}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,rgba(28,22,17,0.15) 55%,transparent 100%);}
-.hero-content{position:relative;z-index:2;padding:0 calc(6vw + 20px) 100px calc(6vw + 20px);width:100%;}
-.hero-eyebrow{font-family:var(--sans);font-size:0.68rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:12px;opacity:0;animation:up 0.9s ease 0.2s forwards;}
-.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold);}
+.hero-content{position:relative;z-index:2;padding:0 6vw 88px;width:100%;}
+.hero-eyebrow{font-family:var(--sans);font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:12px;opacity:0;animation:up 0.9s ease 0.2s forwards;}
 .hero-h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.8rem,8vw,10rem);line-height:0.96;letter-spacing:-0.02em;color:var(--cream);margin-bottom:24px;opacity:0;animation:up 1s ease 0.35s forwards;}
 .hero-desc{font-family:var(--serif);font-style:italic;font-size:clamp(1rem,1.8vw,1.4rem);line-height:1.7;color:var(--cream2);max-width:680px;opacity:0;animation:up 1s ease 0.5s forwards;margin-bottom:40px;}
 .hero-tags{display:flex;gap:8px;flex-wrap:wrap;opacity:0;animation:up 1s ease 0.65s forwards;}
-.htag{font-family:var(--sans);font-size:0.65rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;padding:7px 16px;border:1px solid rgba(244,239,230,0.5);color:var(--cream);}
+.htag{font-family:var(--sans);font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border:1px solid rgba(244,239,230,0.5);color:var(--cream);border-radius:999px;}
 @keyframes up{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
 
 /* ── UTILITY ── */
@@ -106,7 +111,7 @@ nav{position:absolute;top:0;left:0;right:0;z-index:100;padding:44px 46px;display
 .tl-item:hover{background:rgba(244,239,230,0.02);}
 .tl-year{padding:34px 28px 32px;border-right:1px solid var(--border);font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--gold);display:flex;align-items:flex-start;}
 .tl-content{padding:32px 40px;}
-.tl-title{font-size:0.95rem;font-weight:500;color:var(--cream);margin-bottom:8px;}
+.tl-title{font-size:0.95rem;font-weight:700;color:var(--cream);margin-bottom:8px;}
 .tl-desc{font-size:0.85rem;line-height:1.8;color:var(--cream2);}
 
 /* ── PORTFOLIO ── */
@@ -124,12 +129,12 @@ nav{position:absolute;top:0;left:0;right:0;z-index:100;padding:44px 46px;display
 .fc-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;}
 .film-card:hover .fc-image img{transform:scale(1.04);}
 .fc-body{padding:48px 52px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--border);}
-.fc-type{font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);opacity:0.8;margin-bottom:14px;}
+.fc-type{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);opacity:0.9;margin-bottom:14px;}
 .fc-title{font-family:var(--serif);font-size:clamp(1.8rem,2.5vw,2.8rem);font-weight:400;color:var(--cream);margin-bottom:8px;line-height:1.1;}
 .fc-tagline{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--gold);opacity:0.75;margin-bottom:20px;}
 .fc-desc{font-size:0.87rem;line-height:1.85;color:var(--cream2);margin-bottom:24px;}
 .fc-meta{display:flex;flex-direction:column;gap:8px;padding-top:20px;border-top:1px solid var(--border);}
-.fc-meta-item{font-family:var(--sans);font-size:0.62rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:var(--stone);display:flex;gap:10px;align-items:center;}
+.fc-meta-item{font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--stone);display:flex;gap:10px;align-items:center;}
 .fc-meta-dot{width:3px;height:3px;background:var(--gold);border-radius:50%;flex-shrink:0;opacity:0.5;}
 
 /* ── FLOWING WOOD FEATURE ── */
@@ -147,7 +152,7 @@ nav{position:absolute;top:0;left:0;right:0;z-index:100;padding:44px 46px;display
 .laurel-icon{padding:18px 0 18px 18px;display:flex;align-items:center;justify-content:center;}
 .laurel-info{padding:18px 20px 18px 0;}
 .laurel-name{font-size:0.9rem;font-weight:500;color:#28221b;margin-bottom:3px;}
-.laurel-detail{font-family:var(--sans);font-size:0.62rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:#6b5a47;}
+.laurel-detail{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#6b5a47;}
 .fw-right{display:flex;flex-direction:column;gap:20px;}
 .fw-poster{width:100%;aspect-ratio:2/3;overflow:hidden;border:1px solid rgba(40,34,27,0.12);position:relative;}
 .fw-poster img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;}
@@ -212,6 +217,12 @@ section, .sec, .cred-strip, .learn-transition, footer,
 <body>
 
 <!-- ── NAV ── -->
+<!-- Announcement banner -->
+<div class="announce">
+  <a href="apply.html">Now taking applications for Northstar Academy — Free strategy call ↓</a>
+</div>
+
+<!-- Sticky nav -->
 <nav id="nav">
   <a href="#" class="nav-name">Joel Bryant</a>
   <div class="nav-links">
