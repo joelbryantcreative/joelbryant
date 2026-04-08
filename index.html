@@ -212,6 +212,12 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:
 .tl-cta-heading em{font-style:italic;color:var(--amber);}
 @media(max-width:960px){.tl-cta{grid-template-columns:1fr;gap:52px;}}
 
+.tl-lock-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(40,34,27,0.65);border:1px solid rgba(40,34,27,0.25);padding:7px 14px;border-radius:2px;}
+.tl-badge-wrap{display:flex;align-items:center;gap:16px;margin-bottom:28px;flex-wrap:wrap;}
+.btn-apply{display:inline-block;font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);background:#28221b;padding:15px 40px;text-decoration:none;transition:background 0.3s;border-radius:999px;border:none;cursor:pointer;}
+.btn-apply:hover{background:#3d3530;}
+.tl-sketch-wrap{position:relative;display:flex;justify-content:center;margin:8px 0 0;pointer-events:none;}
+
 .inquire{background:var(--bg2);border-top:1px solid rgba(40,34,27,0.12);}
 .inquire-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start;}
 .inquire-headline{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,4vw,5rem);line-height:1.06;margin-bottom:20px;color:var(--cream);}
@@ -694,6 +700,15 @@ section, .sec, .cred-strip, .learn-transition, footer,
 
     <div class="tl-spine">
 
+      <!-- Hand-drawn arrow annotation at top -->
+      <div class="tl-sketch-wrap">
+        <svg width="120" height="52" viewBox="0 0 120 52" fill="none" style="opacity:0.35;">
+          <path d="M10 8 C20 6, 50 4, 60 26 C70 46, 95 44, 108 38" stroke="#28221b" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <path d="M102 32 L108 38 L100 42" stroke="#28221b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <text x="8" y="7" font-family="Georgia, serif" font-style="italic" font-size="9" fill="#28221b" opacity="0.7">the path</text>
+        </svg>
+      </div>
+
       <div class="tl-item left">
         <div class="tl-card">
           <span class="tl-year">2014</span>
@@ -761,6 +776,15 @@ section, .sec, .cred-strip, .learn-transition, footer,
 
     </div>
 
+    <!-- Hand-drawn arrow pointing to CTA -->
+    <div class="tl-sketch-wrap" style="margin:24px 0 0;">
+      <svg width="80" height="56" viewBox="0 0 80 56" fill="none" style="opacity:0.35;">
+        <path d="M40 4 C38 18, 36 32, 40 50" stroke="#28221b" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M34 44 L40 50 L46 44" stroke="#28221b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="48" y="28" font-family="Georgia, serif" font-style="italic" font-size="9" fill="#28221b" opacity="0.7">your turn</text>
+      </svg>
+    </div>
+
     <!-- CTA -->
     <div class="tl-cta reveal">
       <div class="tl-cta-left">
@@ -776,8 +800,14 @@ section, .sec, .cred-strip, .learn-transition, footer,
         <p class="tag-label-light" style="margin-bottom:16px;color:var(--amber);">Northstar Academy</p>
         <h3 class="tl-cta-heading">I took the long road.<br><em>You don't have to.</em></h3>
         <p class="tl-body" style="margin-bottom:32px;">The festivals, the clients, the following, the career — none of it came with a manual. <strong style="color:#28221b;">Now I give that system away</strong> to filmmakers who are serious about doing this for real. Camera or iPhone. Three months. Your move.</p>
-        <a href="apply.html" class="btn-learn"><span>Apply to learn from me</span></a>
-        <p class="lt-note" style="margin-top:12px;">Free strategy call · No obligation · Limited spots</p>
+        <div class="tl-badge-wrap">
+          <span class="tl-lock-badge">
+            <svg width="11" height="13" viewBox="0 0 11 13" fill="none"><rect x="1" y="5.5" width="9" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M3 5.5V3.5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            By application only
+          </span>
+        </div>
+        <a href="apply.html" class="btn-apply">Apply to join</a>
+        <p class="lt-note" style="margin-top:14px;">Free strategy call · No obligation · Limited spots</p>
       </div>
     </div>
 
