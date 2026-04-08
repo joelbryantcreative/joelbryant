@@ -133,7 +133,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:
   .tl-item{grid-template-columns:40px 1fr;}
   .tl-item.left .tl-card,.tl-item.right .tl-card{grid-column:2;grid-row:1;margin:0 0 0 16px;}
   .tl-item.left .tl-spacer,.tl-item.right .tl-spacer{grid-column:1;grid-row:1;}
-  .tl-item.left .tl-empty,.tl-item.right .tl-empty{display:none;}
+  .tl-item.left .tl-polaroid-wrap,.tl-item.right .tl-polaroid-wrap{display:none;}
 }
 
 /* ── PORTFOLIO ── */
@@ -214,7 +214,15 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:
 .tl-cta-heading em{font-style:italic;color:var(--gold);}
 @media(max-width:960px){.tl-cta{grid-template-columns:1fr;gap:52px;}}
 
-.tl-lock-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--cream2);border:1px solid rgba(244,239,230,0.2);padding:7px 14px;border-radius:2px;}
+/* ── POLAROIDS ── */
+.tl-polaroid-wrap{display:flex;align-items:flex-start;justify-content:center;padding:24px 16px;}
+.tl-polaroid{background:#f5f0e8;padding:10px 10px 36px;box-shadow:0 6px 32px rgba(0,0,0,0.4),0 2px 8px rgba(0,0,0,0.2);width:160px;flex-shrink:0;opacity:0;transform:rotate(var(--rot,3deg)) translateY(20px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.tl-polaroid.visible{opacity:1;transform:rotate(var(--rot,3deg)) translateY(0);}
+.tl-polaroid-img{aspect-ratio:1;overflow:hidden;background:#c8bfb0;width:100%;display:flex;align-items:center;justify-content:center;}
+.tl-polaroid-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.tl-polaroid-caption{font-family:var(--serif);font-style:italic;font-size:0.7rem;color:rgba(40,34,27,0.45);text-align:center;margin-top:10px;line-height:1.3;}
+
+align-items:center;gap:8px;font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--cream2);border:1px solid rgba(244,239,230,0.2);padding:7px 14px;border-radius:2px;}
 .tl-badge-wrap{display:flex;align-items:center;gap:16px;margin-bottom:28px;flex-wrap:wrap;}
 .btn-apply{display:inline-block;font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);background:#28221b;padding:15px 40px;text-decoration:none;transition:background 0.3s;border-radius:999px;border:none;cursor:pointer;}
 .btn-apply:hover{background:#3d3530;}
@@ -710,11 +718,11 @@ section, .sec, .cred-strip, .learn-transition, footer,
           <p class="tl-desc">A camera gave creativity a language. A trip through the Kimberleys opened the world. The connection between a lens and something real was made — and never lost.</p>
         </div>
         <div class="tl-spacer"><div class="tl-node"></div><div class="tl-connector"></div></div>
-        <div class="tl-empty"></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:-4deg;"><div class="tl-polaroid-img"><img src="images/polaroid-1.jpg" alt="2014"></div><p class="tl-polaroid-caption">The Kimberleys, 2014</p></div></div>
       </div>
 
       <div class="tl-item right">
-        <div class="tl-empty"></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:3deg;"><div class="tl-polaroid-img"><img src="images/polaroid-2.jpg" alt="2018"></div><p class="tl-polaroid-caption">First paid gig, 2018</p></div></div>
         <div class="tl-spacer"><div class="tl-node"></div><div class="tl-connector"></div></div>
         <div class="tl-card">
           <span class="tl-year">2018</span>
@@ -732,11 +740,11 @@ section, .sec, .cred-strip, .learn-transition, footer,
           <p class="tl-desc">Moved to Western Australia to work inside one of YouTube's biggest ocean adventure channels with Brodie Moss. Helped grow Wade Pappenfus from 25K to over one million subscribers.</p>
         </div>
         <div class="tl-spacer"><div class="tl-node"></div><div class="tl-connector"></div></div>
-        <div class="tl-empty"></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:-2deg;"><div class="tl-polaroid-img"><img src="images/polaroid-3.jpg" alt="2020"></div><p class="tl-polaroid-caption">Western Australia, 2020</p></div></div>
       </div>
 
       <div class="tl-item right">
-        <div class="tl-empty"></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:5deg;"><div class="tl-polaroid-img"><img src="images/polaroid-4.jpg" alt="2024"></div><p class="tl-polaroid-caption">Byron Bay, 2024</p></div></div>
         <div class="tl-spacer"><div class="tl-node"></div><div class="tl-connector"></div></div>
         <div class="tl-card">
           <span class="tl-year">2024</span>
@@ -754,11 +762,11 @@ section, .sec, .cred-strip, .learn-transition, footer,
           <p class="tl-desc">Flowing Wood selected for Byron Bay Film Festival (winner), Noosa Film Festival, and France Anglet International Surf Film Festival. Three international selections.</p>
         </div>
         <div class="tl-spacer"><div class="tl-node"></div><div class="tl-connector"></div></div>
-        <div class="tl-empty"></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:-3deg;"><div class="tl-polaroid-img"><img src="images/polaroid-5.jpg" alt="2025"></div><p class="tl-polaroid-caption">Flowing Wood, 2025</p></div></div>
       </div>
 
       <div class="tl-item right">
-        <div class="tl-empty"></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:4deg;"><div class="tl-polaroid-img"><img src="images/polaroid-6.jpg" alt="Now"></div><p class="tl-polaroid-caption">Byron Bay, now</p></div></div>
         <div class="tl-spacer"><div class="tl-node"></div></div>
         <div class="tl-card">
           <span class="tl-year-label">Now</span>
@@ -898,17 +906,37 @@ function closeLightbox(){
 
 lbClose.addEventListener('click',closeLightbox);
 lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});(entries=>{
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+
+const revealObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
       const s=[...e.target.parentElement.querySelectorAll('.reveal')];
       setTimeout(()=>e.target.classList.add('in'),s.indexOf(e.target)*90);
-      obs.unobserve(e.target);
+      revealObs.unobserve(e.target);
     }
   });
 },{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
 
+const polaroidObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('visible'),100);
+      polaroidObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.25});
+document.querySelectorAll('.tl-polaroid').forEach(p=>polaroidObs.observe(p));
+
+document.querySelectorAll('.wt-tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.wt-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.wt-panel').forEach(p=>p.style.display='none');
+    btn.classList.add('active');
+    document.getElementById('wt-'+btn.dataset.tab).style.display='block';
+  });
+});
 </script>
 </body>
 </html>
