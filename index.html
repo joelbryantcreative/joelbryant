@@ -325,10 +325,11 @@ footer{padding:36px 6vw;border-top:1px solid var(--border);display:flex;justify-
   .tl-cta-right{padding:36px 28px!important;}
   .tl-cta-heading{font-size:1.8rem;}
   .tl-spine::before{left:24px;transform:none;}
-  .tl-item,.tl-item.right{grid-template-columns:36px 1fr!important;}
+  .tl-item,.tl-item.right{grid-template-columns:36px 1fr!important;grid-template-rows:auto auto;}
   .tl-item.left .tl-card,.tl-item.right .tl-card{grid-column:2!important;grid-row:1;margin:0 0 0 14px!important;}
-  .tl-item.left .tl-spacer,.tl-item.right .tl-spacer{grid-column:1!important;grid-row:1;}
-  .tl-item.left .tl-polaroid-wrap,.tl-item.right .tl-polaroid-wrap{display:none!important;}
+  .tl-item.left .tl-spacer,.tl-item.right .tl-spacer{grid-column:1!important;grid-row:1 / span 2;}
+  .tl-item.left .tl-polaroid-wrap,.tl-item.right .tl-polaroid-wrap{display:flex!important;grid-column:2!important;grid-row:2;justify-content:center;padding:16px 0 8px;margin-left:14px;}
+  .tl-polaroid{width:160px!important;}
   .tl-card{padding:20px 18px;}
   .tl-year{font-size:2rem;}
   .tl-year-label{font-size:0.9rem;}
