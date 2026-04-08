@@ -116,7 +116,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:
 
 /* ── PORTFOLIO ── */
 .portfolio{background:var(--bg);border-top:1px solid var(--border);}
-.portfolio-intro{max-width:680px;margin-bottom:72px;}
+.portfolio-intro{max-width:920px;margin-bottom:72px;}
 .portfolio-headline{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,4vw,5rem);line-height:1.06;margin-bottom:16px;color:var(--cream);}
 .portfolio-headline em{font-style:italic;color:var(--gold);}
 .portfolio-sub{font-size:0.93rem;line-height:1.85;color:var(--cream2);}
@@ -125,7 +125,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:
 .film-card:hover{background:var(--bg2);}
 .film-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform 0.4s ease;}
 .film-card:hover::before{transform:scaleY(1);}
-.fc-image{aspect-ratio:16/10;overflow:hidden;position:relative;background:var(--bg3);}
+.fc-image{overflow:hidden;position:relative;background:var(--bg3);align-self:stretch;}
 .fc-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;}
 .film-card:hover .fc-image img{transform:scale(1.04);}
 .fc-body{padding:48px 52px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--border);}
@@ -468,10 +468,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
       <!-- ROGUE WATCHES -->
       <div class="brand-card">
         <div class="brand-card-img">
-          <!-- Add image: <img src="images/rogue-watches.jpg" alt="Rogue Watches"> -->
-          <div class="brand-placeholder">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.2"><polygon points="5,3 19,12 5,21"/></svg>
-          </div>
+          <img src="images/Rogue-placeholder.gif" alt="Rogue Watches" style="width:100%;height:100%;object-fit:cover;display:block;">
           <div class="brand-card-overlay"></div>
           <span class="brand-card-type">Commercial</span>
         </div>
@@ -484,10 +481,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
       <!-- BYTROPIC NUTRITION -->
       <div class="brand-card">
         <div class="brand-card-img">
-          <!-- Add image: <img src="images/bytropic.jpg" alt="Bytropic Nutrition"> -->
-          <div class="brand-placeholder">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.2"><polygon points="5,3 19,12 5,21"/></svg>
-          </div>
+          <img src="images/Bytropic-placeholder.gif" alt="Bytropic Nutrition" style="width:100%;height:100%;object-fit:cover;display:block;">
           <div class="brand-card-overlay"></div>
           <span class="brand-card-type">Brand Film</span>
         </div>
@@ -515,21 +509,70 @@ section, .sec, .cred-strip, .learn-transition, footer,
 
       <!-- GRÜN RESORT BALI -->
       <div class="brand-card">
-        <div class="brand-card-img"><!-- ── CREATIVE DIRECTION ── -->
+        <div class="brand-card-img">
+          <div class="brand-placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.2"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <div class="brand-card-overlay"></div>
+          <span class="brand-card-type">Brand Film</span>
+        </div>
+        <div class="brand-card-body">
+          <h3 class="brand-card-title">Grün Resort Bali</h3>
+          <p class="brand-card-desc"><!-- Add one-line description --></p>
+        </div>
+      </div>
+
+    </div><!-- /.brand-grid -->
+  </div><!-- /.wrap -->
+</section><!-- /.brand-work -->
+
+<!-- ── FLOWING WOOD FEATURE ── -->
+<section class="sec fw" id="flowing-wood">
+  <div class="wrap">
+    <div class="fw-grid">
+      <div>
+        <p class="tag-label reveal">Featured Film</p>
+        <h2 class="fw-headline reveal">Flowing<br><em>Wood.</em></h2>
+        <p class="fw-tagline reveal">"Painting country, on country, with country."</p>
+        <p class="fw-body reveal">A solitary traveler, surfer, and artist roams Australia's remote coastlines, turning weathered wood into stunning aerial seascapes — navigating themes of nature, solitude, and healing.</p>
+        <p class="fw-body reveal"><strong>Flowing Wood</strong> is Joel's debut feature documentary. Shot across Australia's wild coastlines, it became the first independently produced Byron Bay film to win Best Film at the Byron Bay Film Festival, and was selected for international festivals across two continents.</p>
+        <div class="laurels reveal">
+          <div class="laurel">
+            <div class="laurel-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a07830" stroke-width="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+            <div class="laurel-info"><p class="laurel-name">Byron Bay Film Festival</p><p class="laurel-detail">Winner · Best Byron Bay Film — BBFF2025</p></div>
+          </div>
+          <div class="laurel">
+            <div class="laurel-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a07830" stroke-width="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+            <div class="laurel-info"><p class="laurel-name">Noosa Film Festival</p><p class="laurel-detail">Official Selection · 2025</p></div>
+          </div>
+          <div class="laurel">
+            <div class="laurel-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a07830" stroke-width="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+            <div class="laurel-info"><p class="laurel-name">France Anglet International Surf Film Festival</p><p class="laurel-detail">Official Selection · 2025</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-right">
+        <div class="fw-poster reveal">
+          <img src="images/Flowing-Wood-Poster.jpg" alt="Flowing Wood — A film by Joel Bryant">
+        </div>
+        <div class="yt-wrap reveal">
+          <iframe src="https://www.youtube.com/embed/8GG6SbLBU90" title="Flowing Wood" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="yt-caption reveal">Watch the film · Flowing Wood · 2025</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CREATIVE DIRECTION ── -->
 <section class="sec cd" id="creative-direction">
   <div class="wrap">
-
-    <!-- INTRO -->
     <div class="cd-intro">
       <p class="tag-label-light reveal">Creative Direction</p>
       <h2 class="cd-headline reveal">The vision behind<br><em>the work.</em></h2>
       <p class="cd-body reveal">Alongside my documentary practice, I work as Creative Director for some of the world's most-watched YouTube creators and personal brands. My role goes beyond filming — I shape the entire visual language, narrative strategy, and creative identity that turns an audience into a community. I bring documentary-level craft to content that needs to perform at scale.</p>
     </div>
-
-    <!-- FEATURED CLIENTS -->
     <div class="cd-clients reveal">
-
-      <!-- BRODIE MOSS / YBS -->
       <div class="cd-client-card">
         <div class="cd-client-top">
           <div class="cd-client-meta">
@@ -549,13 +592,8 @@ section, .sec, .cred-strip, .learn-transition, footer,
           <span class="cd-tag">Cinematic Direction</span>
           <span class="cd-tag">YouTube</span>
         </div>
-        <a href="#" class="cd-client-link" target="_blank" rel="noopener">
-          View channel ↗
-          <span class="cd-link-note"><!-- Add YouTube URL --></span>
-        </a>
+        <a href="#" class="cd-client-link" target="_blank" rel="noopener">View channel ↗</a>
       </div>
-
-      <!-- WADE PAPPENFUS -->
       <div class="cd-client-card">
         <div class="cd-client-top">
           <div class="cd-client-meta">
@@ -575,15 +613,9 @@ section, .sec, .cred-strip, .learn-transition, footer,
           <span class="cd-tag">Channel Growth</span>
           <span class="cd-tag">YouTube</span>
         </div>
-        <a href="#" class="cd-client-link" target="_blank" rel="noopener">
-          View channel ↗
-          <span class="cd-link-note"><!-- Add YouTube URL --></span>
-        </a>
+        <a href="#" class="cd-client-link" target="_blank" rel="noopener">View channel ↗</a>
       </div>
-
     </div>
-
-    <!-- WHAT I BRING -->
     <div class="cd-what reveal">
       <p class="cd-what-label">What creative direction actually means</p>
       <div class="cd-what-grid">
@@ -615,57 +647,6 @@ section, .sec, .cred-strip, .learn-transition, footer,
             <p class="cd-what-desc">Helping creators understand what they stand for and how to express it — so their content attracts the right people at scale.</p>
           </div>
         </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-ht="14" viewBox="0 0 24 24" fill="none" stroke="#a07830" stroke-width="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
-          <div class="laurel-info"><p class="laurel-name">Byron Bay Film Festival</p><p class="laurel-detail">Winner · Best Byron Bay Film — BBFF2025</p></div>
-        </div>
-        <div class="laurel">
-          <div class="laurel-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a07830" stroke-width="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
-          <div class="laurel-info"><p class="laurel-name">Noosa Film Festival</p><p class="laurel-detail">Official Selection · 2025</p></div>
-        </div>
-        <div class="laurel">
-          <div class="laurel-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a07830" stroke-width="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
-          <div class="laurel-info"><p class="laurel-name">France Anglet International Surf Film Festival</p><p class="laurel-detail">Official Selection · 2025</p></div>
-        </div>
-      </div>
-    </div>
-    <div class="fw-right">
-      <div class="fw-poster reveal">
-        <img src="images/Flowing-Wood-Poster.jpg" alt="Flowing Wood — A film by Joel Bryant">
-      </div>
-      <div class="yt-wrap reveal">
-        <iframe src="https://www.youtube.com/embed/8GG6SbLBU90" title="Flowing Wood" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <p class="yt-caption reveal">Watch the film · Flowing Wood · 2025</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── CREATIVE DIRECTION ── -->
-<section class="sec cd">
-  <div class="wrap">
-    <div class="cd-intro">
-      <p class="tag-label-light reveal">Creative Direction</p>
-      <h2 class="cd-headline reveal">The vision behind<br><em>the work.</em></h2>
-      <p class="cd-body reveal">Alongside my documentary practice, I work as Creative Director for some of the world's most-watched creators and brands — helping them build the visual language and storytelling depth that makes audiences stay.</p>
-    </div>
-    <div class="cd-grid reveal">
-      <div class="cd-card">
-        <p class="cc-eyebrow">Featured client</p>
-        <h3 class="cc-name">Brodie Moss</h3>
-        <p class="cc-sub">YBS Youngbloods · Millions of subscribers worldwide</p>
-        <p class="cc-body">Creative Director for one of YouTube's most successful ocean adventure channels. Working with Brodie to shape the visual identity, narrative structure, and cinematic quality that has built a global audience of millions. Proof that documentary filmmaking craft translates directly into content that scales.</p>
-      </div>
-      <div class="cd-card">
-        <p class="cc-eyebrow">Also worked with</p>
-        <h3 class="cc-name">Wade Pappenfus</h3>
-        <p class="cc-sub">Lead Videographer & Editor · 25K → 1M subscribers</p>
-        <p class="cc-body">Worked with Wade as lead videographer and editor, helping grow his YouTube channel from 25,000 subscribers to over one million. Understanding what content scales — and why — from the inside of one of Australia's fastest-growing channels.</p>
       </div>
     </div>
   </div>
