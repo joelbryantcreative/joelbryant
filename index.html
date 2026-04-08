@@ -215,13 +215,13 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:
 @media(max-width:960px){.tl-cta{grid-template-columns:1fr;gap:52px;}}
 
 /* ── POLAROIDS ── */
-.tl-polaroid-wrap{display:flex;align-items:flex-start;justify-content:center;padding:24px 16px;}
-.tl-polaroid{background:#f5f0e8;padding:10px 10px 36px;box-shadow:0 6px 32px rgba(0,0,0,0.4),0 2px 8px rgba(0,0,0,0.2);width:160px;flex-shrink:0;opacity:1;transform:rotate(var(--rot,3deg));transition:opacity 0.8s ease,transform 0.8s ease;}
-.tl-polaroid.will-animate{opacity:0;transform:rotate(var(--rot,3deg)) translateY(20px);}
-.tl-polaroid.visible{opacity:1;transform:rotate(var(--rot,3deg)) translateY(0);}
+.tl-polaroid-wrap{display:flex;align-items:flex-start;justify-content:center;padding:16px 8px;}
+.tl-polaroid{background:#f5f0e8;padding:12px 12px 44px;box-shadow:0 8px 40px rgba(0,0,0,0.45),0 2px 10px rgba(0,0,0,0.25);width:var(--size,200px);flex-shrink:0;opacity:1;transform:rotate(var(--rot,3deg)) translate(var(--tx,0px),var(--ty,0px));transition:opacity 0.8s ease,transform 0.8s ease;}
+.tl-polaroid.will-animate{opacity:0;transform:rotate(var(--rot,3deg)) translate(var(--tx,0px),calc(var(--ty,0px) + 24px));}
+.tl-polaroid.visible{opacity:1;transform:rotate(var(--rot,3deg)) translate(var(--tx,0px),var(--ty,0px));}
 .tl-polaroid-img{aspect-ratio:1;overflow:hidden;background:#c8bfb0;width:100%;display:flex;align-items:center;justify-content:center;}
 .tl-polaroid-img img{width:100%;height:100%;object-fit:cover;display:block;}
-.tl-polaroid-caption{font-family:var(--serif);font-style:italic;font-size:0.7rem;color:rgba(40,34,27,0.45);text-align:center;margin-top:10px;line-height:1.3;}
+.tl-polaroid-caption{font-family:var(--serif);font-style:italic;font-size:0.75rem;color:rgba(40,34,27,0.45);text-align:center;margin-top:12px;line-height:1.3;}
 
 align-items:center;gap:8px;font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--cream2);border:1px solid rgba(244,239,230,0.2);padding:7px 14px;border-radius:2px;}
 .tl-badge-wrap{display:flex;align-items:center;gap:16px;margin-bottom:28px;flex-wrap:wrap;}
@@ -719,11 +719,11 @@ section, .sec, .cred-strip, .learn-transition, footer,
           <p class="tl-desc">A camera gave creativity a language. A trip through the Kimberleys opened the world. The connection between a lens and something real was made — and never lost.</p>
         </div>
         <div class="tl-spacer"><div class="tl-node"></div><div class="tl-connector"></div></div>
-        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:-4deg;"><div class="tl-polaroid-img"><img src="images/Polaroid-1.jpg" alt="2014"></div><p class="tl-polaroid-caption">The Kimberleys, 2014</p></div></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:-6deg;--size:220px;--tx:24px;--ty:12px;"><div class="tl-polaroid-img"><img src="images/Polaroid-1.jpg" alt="2014"></div><p class="tl-polaroid-caption">The Kimberleys, 2014</p></div></div>
       </div>
 
       <div class="tl-item right">
-        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:3deg;"><div class="tl-polaroid-img"><img src="images/Polaroid-2.jpg" alt="2018"></div><p class="tl-polaroid-caption">First paid gig, 2018</p></div></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:5deg;--size:190px;--tx:-18px;--ty:28px;"><div class="tl-polaroid-img"><img src="images/Polaroid-2.jpg" alt="2018"></div><p class="tl-polaroid-caption">First paid gig, 2018</p></div></div>
         <div class="tl-spacer"><div class="tl-node"></div><div class="tl-connector"></div></div>
         <div class="tl-card">
           <span class="tl-year">2018</span>
@@ -741,11 +741,11 @@ section, .sec, .cred-strip, .learn-transition, footer,
           <p class="tl-desc">Moved to Western Australia to work inside one of YouTube's biggest ocean adventure channels with Brodie Moss. Helped grow Wade Pappenfus from 25K to over one million subscribers.</p>
         </div>
         <div class="tl-spacer"><div class="tl-node"></div><div class="tl-connector"></div></div>
-        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:-2deg;"><div class="tl-polaroid-img"><img src="images/Polaroid-3.jpg" alt="2020"></div><p class="tl-polaroid-caption">Western Australia, 2020</p></div></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:-3deg;--size:240px;--tx:12px;--ty:8px;"><div class="tl-polaroid-img"><img src="images/Polaroid-3.jpg" alt="2020"></div><p class="tl-polaroid-caption">Western Australia, 2020</p></div></div>
       </div>
 
       <div class="tl-item right">
-        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:5deg;"><div class="tl-polaroid-img"><img src="images/Polaroid-4.jpg" alt="2024"></div><p class="tl-polaroid-caption">Byron Bay, 2024</p></div></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:7deg;--size:210px;--tx:-28px;--ty:16px;"><div class="tl-polaroid-img"><img src="images/Polaroid-4.jpg" alt="2024"></div><p class="tl-polaroid-caption">Byron Bay, 2024</p></div></div>
         <div class="tl-spacer"><div class="tl-node"></div><div class="tl-connector"></div></div>
         <div class="tl-card">
           <span class="tl-year">2024</span>
@@ -763,11 +763,11 @@ section, .sec, .cred-strip, .learn-transition, footer,
           <p class="tl-desc">Flowing Wood selected for Byron Bay Film Festival (winner), Noosa Film Festival, and France Anglet International Surf Film Festival. Three international selections.</p>
         </div>
         <div class="tl-spacer"><div class="tl-node"></div><div class="tl-connector"></div></div>
-        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:-3deg;"><div class="tl-polaroid-img"><img src="images/Polaroid-5.jpg" alt="2025"></div><p class="tl-polaroid-caption">Flowing Wood, 2025</p></div></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:-5deg;--size:230px;--tx:20px;--ty:4px;"><div class="tl-polaroid-img"><img src="images/Polaroid-5.jpg" alt="2025"></div><p class="tl-polaroid-caption">Flowing Wood, 2025</p></div></div>
       </div>
 
       <div class="tl-item right">
-        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:4deg;"><div class="tl-polaroid-img"><img src="images/Polaroid-6.jpg" alt="Now"></div><p class="tl-polaroid-caption">Byron Bay, now</p></div></div>
+        <div class="tl-polaroid-wrap"><div class="tl-polaroid" style="--rot:4deg;--size:200px;--tx:-14px;--ty:20px;"><div class="tl-polaroid-img"><img src="images/Polaroid-6.jpg" alt="Now"></div><p class="tl-polaroid-caption">Byron Bay, now</p></div></div>
         <div class="tl-spacer"><div class="tl-node"></div></div>
         <div class="tl-card">
           <span class="tl-year-label">Now</span>
