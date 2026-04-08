@@ -329,14 +329,16 @@ footer{padding:36px 6vw;border-top:1px solid var(--border);display:flex;justify-
   .tl-item,.tl-item.right{grid-template-columns:36px 1fr!important;grid-template-rows:auto;position:relative;overflow:visible;}
   .tl-item.left .tl-card,.tl-item.right .tl-card{grid-column:2!important;grid-row:1;margin:0 0 0 14px!important;padding:16px 14px;position:relative;z-index:3;}
   .tl-item.left .tl-spacer,.tl-item.right .tl-spacer{grid-column:1!important;grid-row:1;}
-  .tl-item.left .tl-polaroid-wrap,.tl-item.right .tl-polaroid-wrap{display:flex!important;position:absolute;left:50px;top:8px;z-index:5;padding:0;margin:0;grid-column:unset;grid-row:unset;}
+  .tl-item.left .tl-polaroid-wrap,.tl-item.right .tl-polaroid-wrap{display:flex!important;position:absolute;left:50px;top:-44px;z-index:5;padding:0;margin:0;grid-column:unset;grid-row:unset;}
+  .tl-item:last-child .tl-polaroid-wrap{top:-66px;}
   .tl-polaroid{width:110px!important;position:relative;z-index:5;}
   .tl-polaroid-caption{font-size:0.65rem!important;height:48px!important;line-height:1.2;margin-top:0!important;}
   .tl-item .tl-year{padding-left:118px;}
   .tl-item .tl-year-label{padding-left:118px;}
   .tl-item .tl-title{padding-left:118px;}
   .tl-item .tl-desc{padding-left:0;margin-left:0;width:100%;}
-  .tl-item{margin-bottom:32px;margin-top:44px;}
+  .tl-item{margin-bottom:32px;margin-top:52px;}
+  .tl-item:last-child{margin-top:74px;}
   .tl-item:first-child{margin-top:0;}
   .tl-card{padding:20px 18px;}
   .tl-year{font-size:2rem;}
