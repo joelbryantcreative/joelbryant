@@ -23,6 +23,7 @@
   --cream: #f4efe6; --cream2: rgba(244,239,230,0.85); --cream3: rgba(244,239,230,0.65);
   --gold: #e6c385; --golddim: rgba(230,195,133,0.12); --stone: #a99880;
   --border: rgba(244,239,230,0.08); --border2: rgba(244,239,230,0.22);
+  --amber: #a07830;
   --serif: 'Canela Text', Georgia, serif;
   --sans: 'SF Pro Display', system-ui, sans-serif;
   --amber: #a07830;
@@ -62,7 +63,7 @@ nav{position:absolute;top:0;left:0;right:0;z-index:100;padding:44px 46px;display
 .tag-label::before{content:'';width:20px;height:1px;background:var(--amber);}
 .tag-label-light{font-family:var(--sans);font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:24px;}
 .tag-label-light::before{content:'';width:20px;height:1px;background:var(--gold);}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.9s ease,transform 0.9s ease;}
+.reveal{opacity:1;transform:none;transition:opacity 0.9s ease,transform 0.9s ease;}
 .reveal.in{opacity:1;transform:none;}
 
 /* ── ABOUT ── */
@@ -190,6 +191,22 @@ footer{padding:36px 6vw;border-top:1px solid var(--border);display:flex;justify-
   .tl-item{grid-template-columns:80px 1fr;}
   nav .nav-links .nav-link:not(.nav-cta){display:none;}
 }
+
+/* ── VISIBILITY GUARANTEE ── */
+section, .sec, .cred-strip, .learn-transition, footer,
+.about-grid, .fw-grid, .portfolio-intro, .film-cards,
+.film-card, .cd-intro, .cd-grid, .tl-intro, .tl-items,
+.lt-inner, .hero-content, .cred-row, .cred-item {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
 </style>
 </head>
 <body>
