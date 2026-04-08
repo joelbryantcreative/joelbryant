@@ -181,7 +181,37 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:
 .lm-ns-text{font-family:var(--sans);font-size:0.65rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,239,230,0.5);}
 .lm-ns-text em{font-style:normal;color:var(--gold);opacity:0.8;}
 
-/* ── FOOTER ── */
+/* ── INQUIRE ── */
+.inquire{background:var(--bg2);border-top:1px solid var(--border);}
+.inquire-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start;}
+.inquire-headline{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,4vw,5rem);line-height:1.06;margin-bottom:20px;color:var(--cream);}
+.inquire-headline em{font-style:italic;color:var(--gold);}
+.inquire-body{font-size:0.93rem;line-height:1.9;color:var(--cream2);margin-bottom:28px;}
+.inquire-types{display:flex;flex-direction:column;border:1px solid var(--border);margin-top:40px;}
+.inquire-type{display:flex;align-items:center;gap:16px;padding:16px 20px;border-bottom:1px solid var(--border);transition:background 0.2s;}
+.inquire-type:last-child{border-bottom:none;}
+.inquire-type:hover{background:rgba(244,239,230,0.02);}
+.it-dot{width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0;opacity:0.6;}
+.it-label{font-family:var(--sans);font-size:0.72rem;font-weight:500;color:var(--cream2);}
+.inquire-form{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.form-field{display:flex;flex-direction:column;border-bottom:1px solid var(--border);border-right:1px solid var(--border);position:relative;}
+.form-field:last-child,.form-row .form-field:last-child{border-right:none;}
+.form-field.full{grid-column:1/-1;border-right:none;}
+.form-label{font-family:var(--sans);font-size:0.6rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--stone);padding:14px 20px 0;pointer-events:none;}
+.form-input,.form-select,.form-textarea{background:transparent;border:none;outline:none;font-family:var(--sans);font-size:0.9rem;font-weight:300;color:var(--cream);padding:6px 20px 14px;width:100%;-webkit-appearance:none;appearance:none;}
+.form-textarea{resize:none;min-height:140px;line-height:1.7;}
+.form-select{cursor:pointer;}
+.form-select option{background:var(--bg2);color:var(--cream);}
+.form-field:focus-within{background:rgba(244,239,230,0.02);}
+.form-field:focus-within .form-label{color:var(--gold);}
+.form-submit-row{padding:24px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px;}
+.form-note{font-family:var(--sans);font-size:0.65rem;color:rgba(244,239,230,0.3);letter-spacing:0.05em;}
+.btn-inquire{font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--bg);background:var(--gold);border:none;padding:14px 36px;cursor:pointer;transition:background 0.3s;flex-shrink:0;}
+.btn-inquire:hover{background:var(--cream);}
+@media(max-width:960px){.inquire-grid{grid-template-columns:1fr;gap:52px;}.form-row{grid-template-columns:1fr;}.form-field{border-right:none;}}
+
+
 footer{padding:36px 6vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
 .footer-l{font-family:var(--sans);font-size:0.65rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--cream3);}
 .footer-links{display:flex;gap:24px;}
@@ -324,6 +354,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
   <div class="nav-links">
     <a href="#work" class="nav-link">Work</a>
     <a href="#about" class="nav-link">About</a>
+    <a href="#inquire" class="nav-link">Inquire</a>
     <a href="apply.html" class="nav-link nav-cta">Learn from me</a>
   </div>
 </nav>
@@ -390,7 +421,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
     </div>
 
     <!-- ── DOCUMENTARY PANEL ── -->
-    <div class="wt-panel active" id="wt-documentary">
+    <div class="wt-panel" id="wt-documentary" style="display:block;">
       <div class="film-cards">
 
         <div class="film-card reveal">
@@ -459,7 +490,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
     </div>
 
     <!-- ── BRAND PANEL ── -->
-    <div class="wt-panel" id="wt-brand">
+    <div class="wt-panel" id="wt-brand" style="display:none;">
       <div class="brand-grid">
 
         <div class="brand-card">
@@ -728,6 +759,65 @@ section, .sec, .cred-strip, .learn-transition, footer,
   </div>
 </section>
 
+<!-- ── INQUIRE ── -->
+<section class="sec inquire" id="inquire">
+  <div class="wrap">
+    <div class="inquire-grid">
+
+      <div>
+        <p class="tag-label-light reveal">Work with Joel</p>
+        <h2 class="inquire-headline reveal">Let's make<br>something <em>real.</em></h2>
+        <p class="inquire-body reveal">Whether it's a documentary project, brand film, or creative direction — if you have a story worth telling, get in touch. I take on a limited number of projects each year to ensure the work gets the attention it deserves.</p>
+        <p class="inquire-body reveal">Fill out the form and I'll be in touch within a few days.</p>
+        <div class="inquire-types reveal">
+          <div class="inquire-type"><span class="it-dot"></span><span class="it-label">Documentary & Long-form Storytelling</span></div>
+          <div class="inquire-type"><span class="it-dot"></span><span class="it-label">Brand Films & Commercial Work</span></div>
+          <div class="inquire-type"><span class="it-dot"></span><span class="it-label">Creative Direction for Creators & Brands</span></div>
+          <div class="inquire-type"><span class="it-dot"></span><span class="it-label">Something else — let's talk</span></div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <form class="inquire-form" name="inquire" method="POST" data-netlify="true" action="#">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="inq-name">Your name</label>
+              <input class="form-input" id="inq-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="inq-email">Email address</label>
+              <input class="form-input" id="inq-email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field full">
+              <label class="form-label" for="inq-type">Type of work</label>
+              <select class="form-select" id="inq-type" name="type">
+                <option value="" disabled selected></option>
+                <option value="documentary">Documentary & Long-form</option>
+                <option value="brand">Brand Film & Commercial</option>
+                <option value="creative-direction">Creative Direction</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field full">
+              <label class="form-label" for="inq-message">Tell me about the project</label>
+              <textarea class="form-textarea" id="inq-message" name="message" required></textarea>
+            </div>
+          </div>
+          <div class="form-submit-row">
+            <p class="form-note">I'll respond within a few days.</p>
+            <button type="submit" class="btn-inquire">Send inquiry</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ── FOOTER ── */
 <footer>
   <span class="footer-l">© 2026 Joel Bryant</span>
@@ -753,9 +843,9 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 document.querySelectorAll('.wt-tab').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('.wt-tab').forEach(t=>t.classList.remove('active'));
-    document.querySelectorAll('.wt-panel').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.wt-panel').forEach(p=>p.style.display='none');
     btn.classList.add('active');
-    document.getElementById('wt-'+btn.dataset.tab).classList.add('active');
+    document.getElementById('wt-'+btn.dataset.tab).style.display='block';
   });
 });
 </script>
