@@ -231,6 +231,45 @@ section, .sec, .cred-strip, .learn-transition, footer,
 @media(max-width:960px){.brand-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:600px){.brand-grid{grid-template-columns:1fr;}}
 
+
+/* ── CREATIVE DIRECTION CLIENTS ── */
+.cd-clients{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:80px;}
+.cd-client-card{background:var(--bg2);padding:48px 44px;position:relative;overflow:hidden;transition:background 0.3s;}
+.cd-client-card:hover{background:var(--bg3);}
+.cd-client-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--gold),transparent);opacity:0;transition:opacity 0.3s;}
+.cd-client-card:hover::before{opacity:1;}
+.cd-client-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;gap:20px;}
+.cd-client-eyebrow{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#a07830;margin-bottom:8px;}
+.cd-client-name{font-family:var(--serif);font-size:1.9rem;font-weight:400;color:var(--cream);line-height:1.1;margin-bottom:4px;}
+.cd-client-channel{font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,239,230,0.4);}
+.cd-client-stat{text-align:right;flex-shrink:0;}
+.cd-stat-num{font-family:var(--serif);font-style:italic;font-size:2rem;font-weight:400;color:var(--gold);line-height:1;margin-bottom:4px;white-space:nowrap;}
+.cd-stat-label{font-family:var(--sans);font-size:0.52rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,239,230,0.35);max-width:120px;text-align:right;line-height:1.4;}
+.cd-client-body{font-size:0.87rem;line-height:1.85;color:rgba(244,239,230,0.7);margin-bottom:24px;}
+.cd-client-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;}
+.cd-tag{font-family:var(--sans);font-size:0.55rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:5px 10px;border:1px solid rgba(244,239,230,0.12);color:rgba(244,239,230,0.4);border-radius:2px;}
+.cd-client-link{font-family:var(--sans);font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(230,195,133,0.3);padding-bottom:2px;transition:border-color 0.2s;display:inline-flex;align-items:center;gap:6px;}
+.cd-client-link:hover{border-color:var(--gold);}
+.cd-link-note{display:none;}
+
+/* What I bring grid */
+.cd-what{border-top:1px solid var(--border);padding-top:52px;}
+.cd-what-label{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,239,230,0.3);margin-bottom:32px;}
+.cd-what-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);}
+.cd-what-item{display:flex;gap:20px;align-items:flex-start;padding:28px 32px;border-bottom:1px solid var(--border);border-right:1px solid var(--border);}
+.cd-what-item:nth-child(2n){border-right:none;}
+.cd-what-item:nth-child(3),.cd-what-item:nth-child(4){border-bottom:none;}
+.cd-what-dot{width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:6px;opacity:0.6;}
+.cd-what-title{font-family:var(--sans);font-size:0.82rem;font-weight:600;color:var(--cream);margin-bottom:6px;}
+.cd-what-desc{font-size:0.82rem;line-height:1.75;color:rgba(244,239,230,0.6);}
+
+@media(max-width:960px){
+  .cd-clients{grid-template-columns:1fr;}
+  .cd-what-grid{grid-template-columns:1fr;}
+  .cd-what-item{border-right:none;}
+  .cd-what-item:nth-child(3){border-bottom:1px solid var(--border);}
+}
+
 </style>
 </head>
 <body>
@@ -286,13 +325,13 @@ section, .sec, .cred-strip, .learn-transition, footer,
       <p class="about-body reveal">
         I picked up a camera at 14 and never put it down. Since then it's taken me across Australia, through Indonesia, Kenya, and beyond, documenting the people and stories that remind us what life is really about. My films have screened at international festivals. I've worked as Creative Director for some of the world's most-watched creators. And I've spent years building a creative life that funds itself... without compromising the work that matters.
       </p>
-      <div class="reveal" style="margin-top:32px;padding:28px 32px;border-left:2px solid #a07830;background:rgba(160,120,48,0.05);">
+      <div class="reveal" style="margin-top:32px;padding:14px 20px;border-left:2px solid #a07830;background:rgba(160,120,48,0.05);">
         <p style="font-family:var(--serif);font-style:italic;font-size:1.2rem;line-height:1.6;color:#28221b;margin-bottom:10px;">"My camera saved my life and gave me purpose, now I use it to tell stories that matter."</p>
       </div>
       </div>
     <div class="about-img reveal">
       <img src="images/joel-dp.jpg" alt="Joel Bryant">
-      <div class="about-img-caption">Byron Bay, Australia · 2025</div>
+      <div class="about-img-caption">Byron Bay, Australia · 2026</div>
     </div>
   </div>
 </section>
@@ -476,36 +515,113 @@ section, .sec, .cred-strip, .learn-transition, footer,
 
       <!-- GRÜN RESORT BALI -->
       <div class="brand-card">
-        <div class="brand-card-img">
-          <!-- Add image: <img src="images/grun-resort.jpg" alt="Grün Resort Bali"> -->
-          <div class="brand-placeholder">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.2"><polygon points="5,3 19,12 5,21"/></svg>
+        <div class="brand-card-img"><!-- ── CREATIVE DIRECTION ── -->
+<section class="sec cd" id="creative-direction">
+  <div class="wrap">
+
+    <!-- INTRO -->
+    <div class="cd-intro">
+      <p class="tag-label-light reveal">Creative Direction</p>
+      <h2 class="cd-headline reveal">The vision behind<br><em>the work.</em></h2>
+      <p class="cd-body reveal">Alongside my documentary practice, I work as Creative Director for some of the world's most-watched YouTube creators and personal brands. My role goes beyond filming — I shape the entire visual language, narrative strategy, and creative identity that turns an audience into a community. I bring documentary-level craft to content that needs to perform at scale.</p>
+    </div>
+
+    <!-- FEATURED CLIENTS -->
+    <div class="cd-clients reveal">
+
+      <!-- BRODIE MOSS / YBS -->
+      <div class="cd-client-card">
+        <div class="cd-client-top">
+          <div class="cd-client-meta">
+            <p class="cd-client-eyebrow">Creative Director</p>
+            <h3 class="cd-client-name">Brodie Moss</h3>
+            <p class="cd-client-channel">YBS Youngbloods</p>
           </div>
-          <div class="brand-card-overlay"></div>
-          <span class="brand-card-type">Resort &amp; Hospitality</span>
+          <div class="cd-client-stat">
+            <div class="cd-stat-num">M+</div>
+            <p class="cd-stat-label">Subscribers worldwide</p>
+          </div>
         </div>
-        <div class="brand-card-body">
-          <h3 class="brand-card-title">Grün Resort Bali</h3>
-          <p class="brand-card-desc"><!-- Add one-line description --></p>
+        <p class="cd-client-body">Creative Director for one of YouTube's most successful ocean adventure channels. Responsible for shaping the visual identity, narrative structure, and cinematic quality that has built a global audience of millions. Brodie's content reaches more people in a week than most films reach in a lifetime — and the craft behind it is intentional.</p>
+        <div class="cd-client-tags">
+          <span class="cd-tag">Visual Identity</span>
+          <span class="cd-tag">Narrative Strategy</span>
+          <span class="cd-tag">Cinematic Direction</span>
+          <span class="cd-tag">YouTube</span>
         </div>
+        <a href="#" class="cd-client-link" target="_blank" rel="noopener">
+          View channel ↗
+          <span class="cd-link-note"><!-- Add YouTube URL --></span>
+        </a>
+      </div>
+
+      <!-- WADE PAPPENFUS -->
+      <div class="cd-client-card">
+        <div class="cd-client-top">
+          <div class="cd-client-meta">
+            <p class="cd-client-eyebrow">Lead Videographer & Editor</p>
+            <h3 class="cd-client-name">Wade Pappenfus</h3>
+            <p class="cd-client-channel">YouTube Creator</p>
+          </div>
+          <div class="cd-client-stat">
+            <div class="cd-stat-num">25K<span style="font-size:1.2rem;opacity:0.5;margin:0 6px;">→</span>1M+</div>
+            <p class="cd-stat-label">Subscribers — built with Joel</p>
+          </div>
+        </div>
+        <p class="cd-client-body">Lead Videographer and Editor for Wade's channel from its earliest days, growing the audience from 25,000 to over one million subscribers. This growth wasn't accidental — it came from understanding what makes people stay, share, and come back. The same documentary storytelling instincts that win festival selections also build audiences at scale.</p>
+        <div class="cd-client-tags">
+          <span class="cd-tag">Videography</span>
+          <span class="cd-tag">Editing</span>
+          <span class="cd-tag">Channel Growth</span>
+          <span class="cd-tag">YouTube</span>
+        </div>
+        <a href="#" class="cd-client-link" target="_blank" rel="noopener">
+          View channel ↗
+          <span class="cd-link-note"><!-- Add YouTube URL --></span>
+        </a>
       </div>
 
     </div>
+
+    <!-- WHAT I BRING -->
+    <div class="cd-what reveal">
+      <p class="cd-what-label">What creative direction actually means</p>
+      <div class="cd-what-grid">
+        <div class="cd-what-item">
+          <div class="cd-what-dot"></div>
+          <div>
+            <p class="cd-what-title">Visual identity</p>
+            <p class="cd-what-desc">Defining the colour language, shot style, pacing, and aesthetic that makes a channel unmistakably itself.</p>
+          </div>
+        </div>
+        <div class="cd-what-item">
+          <div class="cd-what-dot"></div>
+          <div>
+            <p class="cd-what-title">Narrative strategy</p>
+            <p class="cd-what-desc">Structuring content so it pulls people in, holds them, and leaves them wanting the next one. Documentary technique applied to YouTube.</p>
+          </div>
+        </div>
+        <div class="cd-what-item">
+          <div class="cd-what-dot"></div>
+          <div>
+            <p class="cd-what-title">Audience growth</p>
+            <p class="cd-what-desc">Content that earns an audience through quality, not hacks. The kind of growth that compounds because people genuinely care.</p>
+          </div>
+        </div>
+        <div class="cd-what-item">
+          <div class="cd-what-dot"></div>
+          <div>
+            <p class="cd-what-title">Brand positioning</p>
+            <p class="cd-what-desc">Helping creators understand what they stand for and how to express it — so their content attracts the right people at scale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ── FLOWING WOOD FEATURE ── -->
-<section class="sec fw" id="flowing-wood">
-  <div class="wrap fw-grid">
-    <div>
-      <p class="tag-label reveal">Featured Film — 2025</p>
-      <h2 class="fw-headline reveal">Flowing<br><em>Wood.</em></h2>
-      <p class="fw-tagline reveal">"Painting country, on country, with country."</p>
-      <p class="fw-body reveal">A solitary traveler, surfer, and artist roams Australia's remote coastlines, turning weathered wood into stunning aerial seascapes. Gathering materials from the very beaches he visits, he finds solace in the rhythm of the ocean and the creative process.</p>
-      <p class="fw-body reveal"><strong>Through art, he navigates themes of nature, solitude, and healing</strong> — transforming loss into something beautiful, one brushstroke at a time.</p>
-      <div class="laurels reveal">
-        <div class="laurel">
-          <div class="laurel-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a07830" stroke-width="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+ht="14" viewBox="0 0 24 24" fill="none" stroke="#a07830" stroke-width="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
           <div class="laurel-info"><p class="laurel-name">Byron Bay Film Festival</p><p class="laurel-detail">Winner · Best Byron Bay Film — BBFF2025</p></div>
         </div>
         <div class="laurel">
