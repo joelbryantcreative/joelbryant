@@ -264,6 +264,55 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:
 
 
 footer{padding:36px 6vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+
+/* ── MOBILE OPTIMISATION ── */
+@media(max-width:768px){
+  .sec{padding:64px 5vw;}
+  .learn-transition{padding:64px 5vw;}
+  .announce{font-size:0.58rem;padding:10px 4vw;}
+  nav{padding:0 5vw;}
+  .hero-content{padding:0 5vw 64px;}
+  .hero-h1{font-size:clamp(3rem,14vw,5rem);}
+  .hero-desc{font-size:0.95rem;}
+  .hero-tags{gap:6px;}
+  .htag{font-size:0.6rem;padding:6px 12px;}
+  .about-grid{grid-template-columns:1fr;gap:40px;}
+  .about-img{aspect-ratio:3/2;}
+  .wt-header{flex-direction:column;align-items:flex-start;gap:24px;margin-bottom:36px;}
+  .wt-tabs{width:100%;}
+  .wt-tab{flex:1;font-size:0.6rem;padding:12px 6px;text-align:center;}
+  .film-cards{gap:12px;}
+  .film-card{grid-template-columns:1fr;height:auto;border-radius:10px;}
+  .fc-image{width:100%;height:220px;border-radius:10px 10px 0 0;position:relative;}
+  .fc-image img{position:absolute;inset:0;width:100%;height:100%;}
+  .fc-body{padding:24px 20px;}
+  .fc-title{font-size:1.4rem;}
+  .brand-grid{gap:10px;}
+  .fw-grid{grid-template-columns:1fr;gap:40px;}
+  .work-doors{grid-template-columns:1fr;}
+  .work-door{min-height:200px;padding:32px 28px;}
+  .inquire-grid{grid-template-columns:1fr;gap:40px;}
+  .form-row{grid-template-columns:1fr;}
+  .form-field{border-right:none;}
+  .form-submit-row{flex-direction:column;align-items:flex-start;}
+  .btn-inquire{width:100%;text-align:center;}
+  .tl-cta{border-radius:8px;}
+  .tl-cta-right{padding:36px 28px!important;}
+  .tl-cta-heading{font-size:1.8rem;}
+  footer{flex-direction:column;gap:16px;text-align:center;}
+  .footer-links{flex-wrap:wrap;justify-content:center;}
+}
+@media(max-width:480px){
+  .sec{padding:48px 4vw;}
+  .hero-h1{font-size:clamp(2.6rem,16vw,4rem);}
+  .wt-tab{font-size:0.55rem;letter-spacing:0.06em;}
+  .fc-body{padding:20px 16px;}
+  .brand-grid{grid-template-columns:1fr;}
+  .tl-card{padding:20px 18px;}
+  .tl-year{font-size:1.8rem;}
+  .tl-year-label{font-size:0.9rem;}
+  .tl-intro{margin-bottom:40px;}
+}
 .footer-l{font-family:var(--sans);font-size:0.65rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--cream3);}
 .footer-links{display:flex;gap:24px;}
 .footer-link{font-family:var(--sans);font-size:0.65rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--cream3);text-decoration:none;transition:color 0.2s;}
