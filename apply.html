@@ -87,7 +87,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
   font-family:var(--serif);font-style:italic;
   font-size:1.3rem;color:var(--cream2);
   line-height:1.5;max-width:640px;
-  margin:0 auto 0;
+  margin:0 auto 20px;
 }
 
 /* ── BULLETS 2x2 ── */
@@ -643,6 +643,8 @@ function handleSubmit(e){
       document.getElementById('formDisclaimer').style.display = 'none';
       document.querySelector('.form-card').style.display = 'none';
       document.querySelector('.bullets-grid').style.display = 'none';
+      document.querySelector('.hero').style.paddingBottom = '0';
+      document.querySelector('.hero-sub').style.marginBottom = '0';
       document.getElementById('successMsg').style.display = 'block';
       window.scrollTo({top:0, behavior:'smooth'});
     } else {
