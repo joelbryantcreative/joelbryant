@@ -388,6 +388,7 @@ select option{background:var(--bg2);color:var(--cream);}
         <p class="disclaimer" id="formDisclaimer" style="margin-top:16px;">Free · No obligation · Limited spots per cohort</p>
       </div>
     </form>
+    </div>
 
     <div class="success" id="successMsg">
       <div class="success-icon">✦</div>
@@ -395,7 +396,6 @@ select option{background:var(--bg2);color:var(--cream);}
       <p>One last step — book your free<br>discovery call with Joel below.</p>
       <a href="https://calendly.com/joelbryant/discovery-call" target="_blank" class="success-btn">Book Your Discovery Call →</a>
       <p class="disclaimer" style="margin-top:20px;">Free · 20 minutes · No obligation</p>
-    </div>
     </div>
   </div>
 
@@ -421,6 +421,7 @@ function handleSubmit(e){
   e.preventDefault();
   document.getElementById('applyForm').style.display = 'none';
   document.getElementById('formDisclaimer').style.display = 'none';
+  document.querySelector('.form-card').style.display = 'none';
   document.getElementById('successMsg').style.display = 'block';
   window.scrollTo({top:0, behavior:'smooth'});
 }
