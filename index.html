@@ -845,7 +845,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
       </div>
 
       <div class="reveal">
-        <form class="inquire-form" name="inquire" method="POST" data-netlify="true" action="#">
+        <form class="inquire-form" id="inquireForm" onsubmit="handleInquire(event)">
           <div class="form-row">
             <div class="form-field">
               <label class="form-label" for="inq-name">Your name</label>
@@ -879,6 +879,10 @@ section, .sec, .cred-strip, .learn-transition, footer,
             <button type="submit" class="btn-inquire">Send inquiry</button>
           </div>
         </form>
+        <div id="inquireSuccess" style="display:none;padding:32px 0;text-align:center;">
+          <p style="font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--cream);margin-bottom:8px;">Message received.</p>
+          <p style="font-size:0.88rem;color:var(--cream2);">I'll be in touch within a few days.</p>
+        </div>
       </div>
 
     </div>
@@ -927,6 +931,23 @@ function closeLightbox(){
 lbClose.addEventListener('click',closeLightbox);
 lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+
+function handleInquire(e){
+  e.preventDefault();
+  const form = document.getElementById('inquireForm');
+  fetch('https://formspree.io/f/mqegoqgv', {
+    method:'POST',
+    body: new FormData(form),
+    headers:{'Accept':'application/json'}
+  }).then(res => {
+    if(res.ok){
+      form.style.display='none';
+      document.getElementById('inquireSuccess').style.display='block';
+    } else {
+      alert('Something went wrong. Please try again.');
+    }
+  }).catch(() => alert('Something went wrong. Please try again.'));
+}
 
 const hamburger=document.getElementById('hamburger');
 const navDropdown=document.getElementById('nav-dropdown');
