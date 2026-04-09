@@ -600,15 +600,15 @@ select option{background:var(--bg2);color:var(--cream);}
       </div>
     </form>
     </div>
+  </div>
 
-    <div class="success" id="successMsg" style="display:none;">
-      <div class="success-card">
-        <div class="success-icon">✦</div>
-        <h2>Application received.</h2>
-        <p>One last step — book your free<br>discovery call with Joel below.</p>
-        <a href="https://calendly.com/joelbryant/discovery-call" target="_blank" class="success-btn">Book Your Discovery Call →</a>
-        <p class="success-note">Free · 20 minutes · No obligation</p>
-      </div>
+  <div class="success" id="successMsg" style="display:none;">
+    <div class="success-card">
+      <div class="success-icon">✦</div>
+      <h2>Application received.</h2>
+      <p>One last step — book your free<br>discovery call with Joel below.</p>
+      <a href="https://calendly.com/joelbryant/discovery-call" target="_blank" class="success-btn">Book Your Discovery Call →</a>
+      <p class="success-note">Free · 20 minutes · No obligation</p>
     </div>
   </div>
 
@@ -644,7 +644,6 @@ function handleSubmit(e){
       document.getElementById('formDisclaimer').style.display = 'none';
       document.querySelector('.form-card').style.display = 'none';
       document.querySelector('.bullets-grid').style.display = 'none';
-      document.querySelector('.hero').style.display = 'none';
       document.getElementById('successMsg').style.display = 'block';
       window.scrollTo({top:0, behavior:'smooth'});
     } else {
