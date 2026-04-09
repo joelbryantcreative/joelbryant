@@ -52,6 +52,9 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:
 .nav-link:hover{opacity:0.6;}
 .nav-cta{font-family:var(--sans);font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);text-decoration:none;border:1px solid rgba(244,239,230,0.5);padding:8px 18px;transition:all 0.2s;border-radius:999px;}
 .nav-cta:hover{background:rgba(244,239,230,0.1);}
+.hero-eyebrow-break{display:none;}
+.hero-eyebrow-br{display:inline;}
+@media(max-width:768px){.hero-eyebrow-break{display:inline;}.hero-eyebrow-br{display:none;}}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
 .nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--cream);transition:all 0.3s ease;}
 .nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
@@ -518,6 +521,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
     <span></span><span></span><span></span>
   </button>
   <div class="nav-dropdown" id="nav-dropdown">
+    <a href="index.html" class="nav-dropdown-link">Home</a>
     <a href="#work" class="nav-dropdown-link">Work</a>
     <a href="#about" class="nav-dropdown-link">About</a>
     <a href="#inquire" class="nav-dropdown-link">Inquire</a>
@@ -531,7 +535,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
     <img src="images/Home-Cover.webp" alt="Joel Bryant — filmmaker, Byron Bay">
   </div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Documentary Filmmaker & Creative Director</p>
+    <p class="hero-eyebrow">Documentary Filmmaker <span class="hero-eyebrow-break"><br></span>& Creative Director</p>
     <h1 class="hero-h1">Joel<br>Bryant<span style="color:var(--gold)">.</span></h1>
     <p class="hero-desc">Great stories don't just show us the world,<br>they make it feel a little more human.</p>
     <div class="hero-tags">
