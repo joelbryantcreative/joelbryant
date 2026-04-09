@@ -52,9 +52,6 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:#28221b;padding:
 .nav-link:hover{opacity:0.6;}
 .nav-cta{font-family:var(--sans);font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);text-decoration:none;border:1px solid rgba(244,239,230,0.5);padding:8px 18px;transition:all 0.2s;border-radius:999px;}
 .nav-cta:hover{background:rgba(244,239,230,0.1);}
-.hero-eyebrow-break{display:none;}
-.hero-eyebrow-br{display:inline;}
-@media(max-width:768px){.hero-eyebrow-break{display:inline;}.hero-eyebrow-br{display:none;}.hero-eyebrow{display:block;}}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
 .nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--cream);transition:all 0.3s ease;}
 .nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
@@ -445,7 +442,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
 .brand-work{border-top:1px solid rgba(40,34,27,0.12);}
 .brand-intro{max-width:680px;margin-bottom:64px;}
 .brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;background:transparent;border:none;}
-.brand-card{background:var(--gold);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column;border-radius:12px;overflow:hidden;}
+.brand-card{background:var(--gold);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;}
 .brand-card:hover{transform:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,0.3);}
 .brand-card-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--bg2);border-radius:12px 12px 0 0;flex-shrink:0;}
 .brand-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s ease;}
@@ -455,7 +452,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
 .brand-card-type{position:absolute;bottom:12px;left:14px;font-family:var(--sans);font-size:0.55rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);z-index:2;}
 .brand-card-body{padding:20px 22px 24px;}
 .brand-card-title{font-family:var(--serif);font-size:1.15rem;font-weight:400;color:#28221b;margin-bottom:6px;line-height:1.25;}
-.brand-card-desc{font-size:0.82rem;line-height:1.7;color:var(--cream2);}
+.brand-card-desc{font-size:0.78rem;line-height:1.6;color:rgba(40,34,27,0.6);margin-top:4px;}
 @media(max-width:960px){.brand-grid{grid-template-columns:1fr 1fr;gap:12px;}}
 @media(max-width:600px){.brand-grid{grid-template-columns:1fr;}}
 
@@ -535,7 +532,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
     <img src="images/Home-Cover.webp" alt="Joel Bryant — filmmaker, Byron Bay">
   </div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Documentary Filmmaker <span class="hero-eyebrow-break"><br></span>& Creative Director</p>
+    <p class="hero-eyebrow">Documentary Filmmaker & Creative Director</p>
     <h1 class="hero-h1">Joel<br>Bryant<span style="color:var(--gold)">.</span></h1>
     <p class="hero-desc">Great stories don't just show us the world,<br>they make it feel a little more human.</p>
     <div class="hero-tags">
@@ -679,7 +676,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
             <div class="brand-card-overlay"></div>
             <span class="brand-card-type">Brand Film</span>
           </div>
-          <div class="brand-card-body"><h3 class="brand-card-title">Craved This I</h3></div>
+          <div class="brand-card-body"><h3 class="brand-card-title">Craved This I</h3><p class="brand-card-desc">Aphrodisiac chocolate — dark, sensory, and unapologetically indulgent.</p></div>
         </a>
 
         <a href="craved-this-2.html" class="brand-card">
@@ -688,7 +685,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
             <div class="brand-card-overlay"></div>
             <span class="brand-card-type">Brand Film</span>
           </div>
-          <div class="brand-card-body"><h3 class="brand-card-title">Craved This II</h3></div>
+          <div class="brand-card-body"><h3 class="brand-card-title">Craved This II</h3><p class="brand-card-desc">A second film — deepening the brand's world of ritual and desire.</p></div>
         </a>
 
         <a href="rogue-watches.html" class="brand-card">
@@ -697,7 +694,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
             <div class="brand-card-overlay"></div>
             <span class="brand-card-type">Commercial</span>
           </div>
-          <div class="brand-card-body"><h3 class="brand-card-title">Rogue Watches</h3></div>
+          <div class="brand-card-body"><h3 class="brand-card-title">Rogue Watches</h3><p class="brand-card-desc">Australian independent watches — craft, precision, and time.</p></div>
         </a>
 
         <a href="bytropic-nutrition.html" class="brand-card">
@@ -706,7 +703,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
             <div class="brand-card-overlay"></div>
             <span class="brand-card-type">Brand Film</span>
           </div>
-          <div class="brand-card-body"><h3 class="brand-card-title">Bytropic Nutrition</h3></div>
+          <div class="brand-card-body"><h3 class="brand-card-title">Bytropic Nutrition</h3><p class="brand-card-desc">Performance nutrition rooted in nature and human potential.</p></div>
         </a>
 
         <a href="fat-fish-bikes.html" class="brand-card">
@@ -715,7 +712,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
             <div class="brand-card-overlay"></div>
             <span class="brand-card-type">Brand Film</span>
           </div>
-          <div class="brand-card-body"><h3 class="brand-card-title">Fat Fish Bikes</h3></div>
+          <div class="brand-card-body"><h3 class="brand-card-title">Fat Fish Bikes</h3><p class="brand-card-desc">Bikes, culture, and the freedom of the ride.</p></div>
         </a>
 
         <a href="grun-resort.html" class="brand-card">
@@ -724,7 +721,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
             <div class="brand-card-overlay"></div>
             <span class="brand-card-type">Brand Film</span>
           </div>
-          <div class="brand-card-body"><h3 class="brand-card-title">Grün Resort Bali</h3></div>
+          <div class="brand-card-body"><h3 class="brand-card-title">Grün Resort Bali</h3><p class="brand-card-desc">Luxury eco-retreat in Bali — stillness, nature, and real rest.</p></div>
         </a>
 
       </div>
