@@ -412,7 +412,7 @@ section, .sec, .cred-strip, .learn-transition, footer,
 #tab-brand:checked ~ .wt-header label[for="tab-brand"]{background:var(--gold);color:var(--bg);}
 #tab-doc:checked ~ #wt-documentary{display:block;}
 #tab-brand:checked ~ #wt-brand{display:block;}
-.wt-blurb{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--cream2);line-height:1.7;margin-bottom:40px;max-width:600px;}
+.wt-blurb{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--cream2);line-height:1.7;margin-bottom:40px;max-width:600px;display:none;}
 
 /* ── TWO-DOOR WORK ENTRY ── */
 .work-entry{background:var(--bg);border-top:1px solid var(--border);padding:120px 6vw;}
@@ -957,16 +957,18 @@ function handleInquire(e){
   }).catch(() => alert('Something went wrong. Please try again.'));
 }
 
-function updateBlurb(){
-  const docBlurb = document.querySelector('.wt-blurb-doc');
-  const brandBlurb = document.querySelector('.wt-blurb-brand');
-  const isDoc = document.getElementById('tab-doc').checked;
-  if(docBlurb) docBlurb.style.display = isDoc ? 'block' : 'none';
-  if(brandBlurb) brandBlurb.style.display = isDoc ? 'none' : 'block';
-}
-document.getElementById('tab-doc').addEventListener('change', updateBlurb);
-document.getElementById('tab-brand').addEventListener('change', updateBlurb);
-updateBlurb();
+document.addEventListener('DOMContentLoaded', function(){
+  function updateBlurb(){
+    const docBlurb = document.querySelector('.wt-blurb-doc');
+    const brandBlurb = document.querySelector('.wt-blurb-brand');
+    const isDoc = document.getElementById('tab-doc').checked;
+    if(docBlurb) docBlurb.style.display = isDoc ? 'block' : 'none';
+    if(brandBlurb) brandBlurb.style.display = isDoc ? 'none' : 'block';
+  }
+  document.getElementById('tab-doc').addEventListener('change', updateBlurb);
+  document.getElementById('tab-brand').addEventListener('change', updateBlurb);
+  updateBlurb();
+});
 
 const hamburger=document.getElementById('hamburger');
 const navDropdown=document.getElementById('nav-dropdown');
