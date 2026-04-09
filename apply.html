@@ -246,7 +246,7 @@ select option{background:var(--bg2);color:var(--cream);}
   display:none;
   max-width:680px;
   margin:0 auto;
-  padding:0 24px 100px;
+  padding:64px 24px 100px;
   text-align:center;
   animation:fadeUp 0.5s ease forwards;
 }
@@ -640,9 +640,11 @@ function handleSubmit(e){
   })
   .then(res => {
     if(res.ok){
-      form.style.display = 'none';
+      document.getElementById('applyForm').style.display = 'none';
       document.getElementById('formDisclaimer').style.display = 'none';
       document.querySelector('.form-card').style.display = 'none';
+      document.querySelector('.bullets-grid').style.display = 'none';
+      document.querySelector('.hero').style.display = 'none';
       document.getElementById('successMsg').style.display = 'block';
       window.scrollTo({top:0, behavior:'smooth'});
     } else {
