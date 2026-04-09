@@ -99,18 +99,24 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 
 /* ── FORM SECTION ── */
 .form-section{
-  max-width:640px;
+  max-width:680px;
   margin:0 auto;
   padding:64px 24px 100px;
 }
+.form-card{
+  background:#3d3530;
+  border:1px solid rgba(230,195,133,0.12);
+  border-radius:12px;
+  padding:52px 48px 48px;
+}
 .form-header{
   text-align:center;
-  margin-bottom:52px;
+  margin-bottom:48px;
 }
 .form-header-label{
   font-family:var(--mono);font-size:0.54rem;
   letter-spacing:0.18em;text-transform:uppercase;
-  color:rgba(244,239,230,0.3);margin-bottom:12px;
+  color:rgba(230,195,133,0.5);margin-bottom:12px;
 }
 .form-header-title{
   font-family:var(--serif);font-weight:400;
@@ -131,8 +137,8 @@ input[type=email],
 input[type=tel],
 select{
   width:100%;
-  background:var(--cream3);
-  border:1px solid var(--border2);
+  background:rgba(40,34,27,0.4);
+  border:1px solid rgba(230,195,133,0.15);
   color:var(--cream);
   font-family:var(--sans);font-size:0.95rem;font-weight:400;
   padding:16px 18px;
@@ -145,9 +151,9 @@ input[type=email]:focus,
 input[type=tel]:focus,
 select:focus{
   border-color:rgba(230,195,133,0.5);
-  background:rgba(244,239,230,0.08);
+  background:rgba(40,34,27,0.6);
 }
-input::placeholder{color:rgba(244,239,230,0.2);}
+input::placeholder,textarea::placeholder{color:rgba(244,239,230,0.2);}
 select{cursor:pointer;color:rgba(244,239,230,0.3);}
 select.has-value{color:var(--cream);}
 select option{background:var(--bg2);color:var(--cream);}
@@ -158,7 +164,7 @@ select option{background:var(--bg2);color:var(--cream);}
 }
 .country-select-wrap{
   position:relative;display:flex;align-items:center;gap:6px;
-  background:var(--cream3);border:1px solid var(--border2);
+  background:rgba(40,34,27,0.4);border:1px solid rgba(230,195,133,0.15);
   border-right:none;border-radius:4px 0 0 4px;
   padding:0 14px;flex-shrink:0;cursor:pointer;min-width:100px;
   transition:border-color 0.2s;
@@ -177,15 +183,15 @@ select option{background:var(--bg2);color:var(--cream);}
 .radio-options{display:flex;flex-direction:column;gap:10px;}
 .radio-opt{
   display:flex;align-items:center;gap:14px;
-  background:var(--cream3);border:1px solid var(--border2);
+  background:rgba(40,34,27,0.4);border:1px solid rgba(230,195,133,0.15);
   padding:16px 18px;border-radius:4px;cursor:pointer;
   transition:border-color 0.2s,background 0.2s;
 }
-.radio-opt:hover{border-color:rgba(230,195,133,0.3);background:rgba(244,239,230,0.07);}
+.radio-opt:hover{border-color:rgba(230,195,133,0.35);background:rgba(40,34,27,0.55);}
 .radio-opt input[type=radio]{display:none;}
 .radio-dot{
   width:18px;height:18px;border-radius:50%;
-  border:1px solid var(--border2);flex-shrink:0;
+  border:1px solid rgba(230,195,133,0.25);flex-shrink:0;
   display:flex;align-items:center;justify-content:center;
   transition:border-color 0.2s;
 }
@@ -199,17 +205,22 @@ select option{background:var(--bg2);color:var(--cream);}
 .radio-label{font-size:0.9rem;color:var(--cream2);line-height:1.4;}
 .radio-opt.selected .radio-label{color:var(--cream);}
 
-/* Submit */
+/* Submit area */
+.submit-area{
+  margin-top:40px;
+  padding-top:36px;
+  border-top:1px solid rgba(230,195,133,0.1);
+}
 .submit-btn{
-  width:100%;margin-top:8px;
-  background:#28221b;color:var(--cream);
-  border:1px solid rgba(244,239,230,0.2);
+  width:100%;
+  background:var(--gold);color:var(--bg);
+  border:none;
   font-family:var(--sans);font-size:0.72rem;font-weight:600;
   letter-spacing:0.1em;text-transform:uppercase;
   padding:20px;cursor:pointer;
   transition:background 0.25s;border-radius:999px;
 }
-.submit-btn:hover{background:#3d3530;}
+.submit-btn:hover{background:var(--cream);}
 
 .disclaimer{
   margin-top:18px;font-family:var(--mono);font-size:0.5rem;
@@ -275,7 +286,7 @@ select option{background:var(--bg2);color:var(--cream);}
     </div>
     <p class="hero-eyebrow">Apply to work with Joel</p>
     <h1 class="hero-h1">Turn your camera or iPhone<br>into <em>a career.</em></h1>
-    <p class="hero-sub">Without selling out your creative vision.</p>
+    <p class="hero-sub">Full A-Z system to building a creative life you get paid for.</p>
   </div>
 
   <!-- BULLETS STRIP -->
@@ -286,8 +297,8 @@ select option{background:var(--bg2);color:var(--cream);}
     <div class="bullet-item"><span class="bullet-dot">✦</span>Limited spots — reviewed personally by Joel</div>
   </div>
 
-  <!-- FORM -->
   <div class="form-section">
+    <div class="form-card">
     <div class="form-header">
       <p class="form-header-label">Free strategy call · No obligation</p>
       <h2 class="form-header-title">Tell Joel a little about yourself</h2>
@@ -359,7 +370,10 @@ select option{background:var(--bg2);color:var(--cream);}
         </div>
       </div>
 
-      <button type="submit" class="submit-btn">Apply Now — Free Strategy Call</button>
+      <div class="submit-area">
+        <button type="submit" class="submit-btn">Apply Now — Free Strategy Call</button>
+        <p class="disclaimer" id="formDisclaimer" style="margin-top:16px;">Free · No obligation · Limited spots per cohort</p>
+      </div>
     </form>
 
     <div class="success" id="successMsg">
@@ -369,8 +383,7 @@ select option{background:var(--bg2);color:var(--cream);}
       <a href="https://calendly.com/joelbryant/discovery-call" target="_blank" class="success-btn">Book Your Discovery Call →</a>
       <p class="disclaimer" style="margin-top:20px;">Free · 20 minutes · No obligation</p>
     </div>
-
-    <p class="disclaimer" id="formDisclaimer">Free · No obligation · Limited spots per cohort</p>
+    </div>
   </div>
 
   <div class="back-wrap">
