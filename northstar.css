@@ -241,3 +241,28 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 4px 20px rgba(0,0,0,0.28);
 }
+
+/* ── 6. Frosted-glass nav header ──
+   Northstar's landing nav goes translucent + backdrop-blurred once
+   you scroll past the hero. We apply that same "lit glass" look to
+   every other page's sticky nav, so the warm cocoa atmosphere reads
+   through the bar instead of being capped by an opaque dark slab.
+   The landing nav (detected via its <a class="nav-logo">) keeps its
+   own bespoke transparent-on-top → glass-on-scroll JS behaviour. */
+nav:not(:has(.nav-logo)) {
+  background: rgba(28,22,17,0.55) !important;
+  backdrop-filter: blur(18px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(160%) !important;
+  border-bottom: 1px solid rgba(244,239,230,0.07) !important;
+}
+.nav-dropdown {
+  background: rgba(28,22,17,0.82) !important;
+  backdrop-filter: blur(18px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(160%) !important;
+}
+/* Slightly lift the announcement banner above the glass so the
+   blur effect doesn't muddy its bright gold fill. */
+.announce {
+  position: relative;
+  z-index: 101;
+}
