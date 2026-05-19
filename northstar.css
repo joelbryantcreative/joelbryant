@@ -1,0 +1,243 @@
+/* ============================================================
+   northstar.css
+   Northstar (joinnorthstar.co) design moves layered onto the
+   Joel Bryant identity. Loaded after each page's own <style>
+   block so these rules cascade as the final layer.
+   ============================================================ */
+
+/* Heavy SF Pro for the new sans-bold display headlines.
+   Registered here so every page can use it without editing each
+   per-page font-face block. */
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFProDisplay-Heavy.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFProDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── 1. Atmospheric vignette on dark sections ──
+   Northstar's deep cocoa background isn't flat — there's a faint
+   amber halo at the top and a soft darkening at the corners. We
+   replace the flat dark fill on each dark section with a layered
+   gradient that reads as the same colour but feels lit. */
+.cd, .timeline, .portfolio, .inquire,
+.work-tabs, .work-entry, .brand-work {
+  background:
+    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(230,195,133,0.07), transparent 65%),
+    radial-gradient(ellipse 90% 65% at 50% 110%, rgba(0,0,0,0.28), transparent 60%),
+    var(--bg) !important;
+}
+.learn-transition {
+  background:
+    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(230,195,133,0.06), transparent 65%),
+    var(--bg2) !important;
+}
+/* Same warm-glow treatment for the body itself, so single-section
+   pages (apply.html, landing.html) inherit the atmosphere. */
+body {
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(230,195,133,0.05), transparent 60%),
+    var(--bg);
+}
+
+/* ── 2. Pill-shaped section eyebrow tags ──
+   Northstar's signature "THE 12-WEEK JOURNEY" capsule. Gold border,
+   dark interior with a faint amber inner glow. Replaces the plain
+   uppercase eyebrow text used throughout the site. */
+.tag-label,
+.tag-label-light,
+.proj-type,
+.proj-section-label,
+.frames-label,
+.cta-eyebrow,
+.hero-eyebrow,
+.tag {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0 !important;
+  padding: 9px 20px 8px !important;
+  border: 1px solid rgba(230,195,133,0.4) !important;
+  background:
+    radial-gradient(ellipse at center, rgba(230,195,133,0.12), transparent 75%),
+    rgba(40,34,27,0.6) !important;
+  color: var(--gold) !important;
+  border-radius: 999px !important;
+  font-family: var(--sans) !important;
+  font-size: 0.62rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  box-shadow:
+    0 0 28px rgba(230,195,133,0.12),
+    inset 0 0 0 1px rgba(230,195,133,0.05) !important;
+  width: auto !important;
+  margin-bottom: 28px;
+  text-decoration: none;
+}
+.tag-label::before,
+.tag-label-light::before,
+.proj-type::before,
+.proj-section-label::before,
+.frames-label::before,
+.cta-eyebrow::before,
+.hero-eyebrow::before,
+.tag::before {
+  content: none !important;
+  display: none !important;
+}
+/* Hero eyebrow sits on photography — slightly stronger fill */
+.hero-eyebrow {
+  background:
+    radial-gradient(ellipse at center, rgba(230,195,133,0.16), transparent 75%),
+    rgba(20,15,10,0.6) !important;
+  border-color: rgba(230,195,133,0.5) !important;
+}
+/* Eyebrows on cream sections need inverted contrast */
+.about .tag-label,
+.about2 .tag-label,
+.fw .tag-label,
+.lt-inner .tag-label {
+  background:
+    radial-gradient(ellipse at center, rgba(160,120,48,0.10), transparent 75%),
+    rgba(40,34,27,0.06) !important;
+  border-color: rgba(160,120,48,0.45) !important;
+  color: var(--amber) !important;
+}
+
+/* ── 3. Northstar headline treatment ──
+   The signature move: bold sans-serif for the body of the headline
+   with a serif italic accent word in gold ("The Northstar Cohort.").
+   We flip the listed display headlines from Canela to SF Pro Heavy
+   while letting any <em> child render as italic Canela in gold. */
+.about-headline,
+.about2-headline,
+.wt-headline,
+.fw-headline,
+.lt-headline,
+.inquire-headline,
+.work-entry-headline,
+.tl-cta-heading,
+.tl-headline,
+.cd-headline,
+.portfolio-headline,
+.t-headline,
+.lanes-headline,
+.who-headline,
+.tr-headline,
+.fy-headline,
+.pr-headline {
+  font-family: var(--sans) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.04 !important;
+}
+.about-headline em,
+.about2-headline em,
+.wt-headline em,
+.fw-headline em,
+.lt-headline em,
+.inquire-headline em,
+.work-entry-headline em,
+.tl-cta-heading em,
+.tl-headline em,
+.cd-headline em,
+.portfolio-headline em,
+.t-headline em,
+.lanes-headline em,
+.who-headline em,
+.tr-headline em,
+.fy-headline em,
+.pr-headline em {
+  font-family: var(--serif) !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  letter-spacing: -0.005em !important;
+}
+/* On cream-background headlines, the italic accent uses the warmer
+   amber rather than gold — matches Northstar's rust-orange italic
+   tone seen on its cream "There's never been more opportunity" panel. */
+.about-headline em,
+.about2-headline em,
+.fw-headline em {
+  color: var(--amber) !important;
+}
+/* Dark-section headlines keep the brighter gold italic. */
+.wt-headline em,
+.lt-headline em,
+.inquire-headline em,
+.work-entry-headline em,
+.tl-headline em,
+.cd-headline em,
+.portfolio-headline em,
+.t-headline em,
+.lanes-headline em,
+.who-headline em,
+.tr-headline em,
+.fy-headline em,
+.pr-headline em,
+.tl-cta-heading em {
+  color: var(--gold) !important;
+}
+
+/* ── 4. Glowing gold-bordered card ──
+   Northstar's "Master the art." / "Build the business." comparison
+   cards: dark interior, amber inner glow, hairline gold border that
+   intensifies on hover. We retrofit it onto the two-door work entry
+   on the home page and expose it as a utility for future use. */
+.ns-glow-card,
+.work-door {
+  background:
+    radial-gradient(ellipse 100% 80% at 50% 50%, rgba(230,195,133,0.08), transparent 70%),
+    rgba(40,34,27,0.7) !important;
+  border: 1px solid rgba(230,195,133,0.35) !important;
+  border-radius: 16px !important;
+  box-shadow:
+    0 0 40px rgba(230,195,133,0.08),
+    inset 0 0 0 1px rgba(230,195,133,0.04) !important;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease !important;
+}
+.ns-glow-card:hover,
+.work-door:hover {
+  border-color: rgba(230,195,133,0.65) !important;
+  box-shadow:
+    0 0 60px rgba(230,195,133,0.20),
+    inset 0 0 0 1px rgba(230,195,133,0.08) !important;
+  transform: translateY(-2px);
+}
+/* The work-doors container previously relied on a shared 1px gap
+   to fake an internal border. Let the glow cards breathe instead. */
+.work-doors {
+  background: transparent !important;
+  border: none !important;
+  gap: 20px !important;
+}
+/* Soften the existing "Primary focus" badge so it doesn't fight the
+   new glowing pill aesthetic. */
+.work-door-primary::after {
+  border-radius: 999px !important;
+  background: rgba(40,34,27,0.7) !important;
+}
+
+/* ── 5. Cream-pill APPLY-style nav button ──
+   Match Northstar's APPLY NOW button: solid cream pill, dark text. */
+.nav-cta {
+  background: var(--cream) !important;
+  color: #28221b !important;
+  border-color: var(--cream) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
+}
+.nav-cta:hover {
+  background: #fff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.28);
+}
