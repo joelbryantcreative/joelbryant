@@ -267,36 +267,26 @@ nav:not(:has(.nav-logo)) {
   z-index: 101;
 }
 
-/* ── 7. DM Mono typography ──
-   Northstar's APPLY NOW button is set in DM Mono. Pull that same
-   monospace face across the site for nav identifiers, label-style
-   elements, and display headlines so the typographic voice matches
-   the Northstar landing.
-   The serif <em> accent words inside headlines keep their gold
-   Canela italic — those rules earlier in this file remain in force. */
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+/* ── 7. SF Pro Heavy typography ──
+   Northstar's APPLY NOW button is set in SF Pro Display Heavy (800).
+   Push the same weight + face onto nav identifiers, label-style
+   elements, and case-study small caps so they share a voice with the
+   pill. Display headlines are already SF Pro Heavy via section 3, so
+   they need no further treatment here. */
 
-/* Nav identifiers and links: "Joel Bryant" top-left, nav links,
-   mobile dropdown links, back link on case studies, footer text. */
+/* Nav identifiers: "Joel Bryant" top-left, nav links, mobile dropdown,
+   case-study back link, and the cream APPLY pill itself. */
 .nav-name,
 .nav-link,
 .nav-dropdown-link,
-.back-link,
-.footer-l,
-.footer-link {
-  font-family: 'DM Mono', monospace !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.14em !important;
-}
-/* The cream APPLY pill itself */
-.nav-cta {
-  font-family: 'DM Mono', monospace !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.14em !important;
+.nav-cta,
+.back-link {
+  font-family: 'SF Pro Display', system-ui, sans-serif !important;
+  font-weight: 800 !important;
 }
 
-/* Pill eyebrow labels — already styled in section 2, just switch the
-   typeface so they read in the same DM Mono voice as APPLY NOW. */
+/* Pill eyebrows (already styled in section 2) and case-study small
+   caps — switch to SF Pro Heavy so they match the APPLY pill. */
 .tag-label,
 .tag-label-light,
 .proj-type,
@@ -309,37 +299,9 @@ nav:not(:has(.nav-logo)) {
 .proj-meta-label,
 .award-detail,
 .next-proj-dir,
-.next-proj-type {
-  font-family: 'DM Mono', monospace !important;
-}
-
-/* Display headlines: case study titles, section titles, homepage
-   hero, every Northstar/work/about/inquire headline. Drop the
-   negative letter-spacing (mono prefers neutral tracking) and let
-   the weight relax from 800 → 500 to suit the mono face. */
-.hero-h1,
-.proj-title,
-.proj-section-title,
-.next-proj-name,
-.about-headline,
-.about2-headline,
-.wt-headline,
-.fw-headline,
-.lt-headline,
-.inquire-headline,
-.work-entry-headline,
-.tl-cta-heading,
-.tl-headline,
-.cd-headline,
-.portfolio-headline,
-.t-headline,
-.lanes-headline,
-.who-headline,
-.tr-headline,
-.fy-headline,
-.pr-headline {
-  font-family: 'DM Mono', monospace !important;
-  font-weight: 500 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.06 !important;
+.next-proj-type,
+.footer-l,
+.footer-link {
+  font-family: 'SF Pro Display', system-ui, sans-serif !important;
+  font-weight: 800 !important;
 }
