@@ -73,7 +73,7 @@ body {
   font-family: var(--sans) !important;
   font-size: 0.62rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.16em !important;
+  letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
   box-shadow:
     0 0 28px rgba(230,195,133,0.12),
@@ -275,7 +275,9 @@ nav:not(:has(.nav-logo)) {
    they need no further treatment here. */
 
 /* Nav identifiers: "Joel Bryant" top-left, nav links, mobile dropdown,
-   case-study back link, and the cream APPLY pill itself. */
+   case-study back link, and the cream APPLY pill itself.
+   Tracking pulled in to ~0.04em to match Northstar's tight uppercase
+   button feel rather than the original wider Apple-style 0.1em. */
 .nav-name,
 .nav-link,
 .nav-dropdown-link,
@@ -283,18 +285,11 @@ nav:not(:has(.nav-logo)) {
 .back-link {
   font-family: 'SF Pro Display', system-ui, sans-serif !important;
   font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
 }
 
-/* Pill eyebrows (already styled in section 2) and case-study small
-   caps — switch to SF Pro Heavy so they match the APPLY pill. */
-.tag-label,
-.tag-label-light,
-.proj-type,
-.proj-section-label,
-.frames-label,
-.cta-eyebrow,
-.hero-eyebrow,
-.tag,
+/* Case-study small caps + footer: match the same compact tracking so
+   the typographic voice is consistent across nav, pills, and meta. */
 .sidebar-label,
 .proj-meta-label,
 .award-detail,
@@ -302,6 +297,20 @@ nav:not(:has(.nav-logo)) {
 .next-proj-type,
 .footer-l,
 .footer-link {
+  font-family: 'SF Pro Display', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+}
+/* Pill eyebrows already get their tracking from section 2 (0.04em).
+   Just make sure the font face here doesn't reset it. */
+.tag-label,
+.tag-label-light,
+.proj-type,
+.proj-section-label,
+.frames-label,
+.cta-eyebrow,
+.hero-eyebrow,
+.tag {
   font-family: 'SF Pro Display', system-ui, sans-serif !important;
   font-weight: 800 !important;
 }
